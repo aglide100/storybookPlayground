@@ -16,6 +16,3 @@ LoggedIn.args = {
 
 export const LoggedOut = Template.bind({});
 LoggedOut.args = {};
-
-export const Hello = Template.bind({});
-Hello.args = {};

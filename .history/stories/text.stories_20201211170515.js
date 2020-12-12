@@ -1,16 +1,16 @@
 import React from 'react';
 
-import { Button } from './Button';
+import { text } from './text';
 
 export default {
-  title: 'Example/Button',
-  component: Button,
+  title: 'Example/text',
+  component: text,
   argTypes: {
     backgroundColor: { control: 'color' },
   },
 };
 
-const Template = (args) => <Button {...args} />;
+const Template = (args) => <text {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
@@ -20,17 +20,17 @@ Primary.args = {
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  label: 'Button',
+  label: 'text',
 };
 
 export const Large = Template.bind({});
 Large.args = {
   size: 'large',
-  label: 'Button',
+  label: 'text',
 };
 
 export const Small = Template.bind({});
 Small.args = {
   size: 'small',
-  label: 'Button',
+  label: 'text',
 };

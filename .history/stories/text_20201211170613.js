@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Button } from './Button';
+import { text } from './text';
 import './header.css';
 
 export const Header = ({ user, onLogin, onLogout, onCreateAccount }) => (
@@ -24,7 +24,7 @@ export const Header = ({ user, onLogin, onLogout, onCreateAccount }) => (
             />
           </g>
         </svg>
-        <h1>HeaderName</h1>
+        <h1>Acme</h1>
       </div>
       <div>
         {user ? (

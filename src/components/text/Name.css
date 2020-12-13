@@ -1,0 +1,8 @@
+.list-item {
+    display: flex;
+    flex-direction: row;
+    background-color: pink;
+}
+
+.title {
+}

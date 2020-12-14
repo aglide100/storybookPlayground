@@ -7,7 +7,7 @@ export default {
   title: 'Name',
 };
 
-const Template = args => <Name {...args} />;
+const Template = (args) => <Name {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
@@ -22,7 +22,7 @@ Default.args = {
 export const Pinned = Template.bind({});
 Pinned.args = {
   Name: {
-    title: 'Pinned',
+    ...Default.args.name,
     state: 'NAME_PINNED',
   },
 };

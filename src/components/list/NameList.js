@@ -6,7 +6,7 @@ import Name from '../text/Name';
 import { connect } from 'react-redux';
 import { archiveName, pinName} from '../../lib/redux';
 
-export function NameList({ loading, names, onPinName, onArchiveName}) {
+export function PureNameList({ loading, names, onPinName, onArchiveName}) {
     const events = {
         onPinName,
         onArchiveName,

@@ -13,7 +13,8 @@ function nameStateReducer(nameState) {
         return {
             ...state,
             names: state.names.map(name => 
-                name.id === action.id ? {...name, state: nameState} : name),
+                name.id === action.id ? {...name, state: nameState} : name
+            ),
         };
     };
 }

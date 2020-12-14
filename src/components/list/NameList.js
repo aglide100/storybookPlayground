@@ -1,8 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 
 import Name from '../text/Name';
+import { connect } from 'react-redux';
+import { archiveName, pinName} from '../../lib/redux';
 
-export default function NameList({ loading, names, onPinName, onArchiveName}) {
+export function NameList({ loading, names, onPinName, onArchiveName}) {
     const events = {
         onPinName,
         onArchiveName,
@@ -55,3 +59,24 @@ export default function NameList({ loading, names, onPinName, onArchiveName}) {
         </div>
     );
 };
+
+PureNameList.propTypes = {
+    loading: PropTypes.bool,
+    names: PropTypes.arrayOf(Name.prototype.name).isRequired,
+    onPinName: PropTypes.func.isRequired,
+    onArchiveName: PropTypes.func.isRequired,
+};
+
+PureNameList.defaultProps = {
+    loading: false,
+};
+
+export default connect(
+    ({ names }) => ({
+        names: names.filter(n => n.state === 'NAME_INBOX' || n.state === 'NAME_PINNED' ),
+    }),
+    dispatch => ({
+        onArchiveName: id => dispatch(archiveName(id)),
+        onPinName: id => dispatch(pinName(id)),
+    })
+)(PureNameList);

@@ -1,17 +1,17 @@
 import React from 'react';
 
-import NameList from './NameList';
+import {PureNameList} from './NameList';
 import * as NameStories from '../text/Name.stories';
 
 
 // default 선언
 export default {
-    component: NameList,
+    component: PureNameList,
     title: 'NameList',
     decorators: [story => <div style={{ padding: '3rem'}}>{story()}</div>],
 };
 
-const Template = args => <NameList {...args} />;
+const Template = args => <PureNameList {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

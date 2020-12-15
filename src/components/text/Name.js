@@ -23,7 +23,7 @@ export default function Name({ name: { id, title, state }, onArchiveName, onPinN
                       <span className={'icon-star'} />
                   </a>
               )}
-          </div>
+          </div>        
       </div>
     );
   }

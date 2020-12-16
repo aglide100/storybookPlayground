@@ -37,4 +37,4 @@ export default function Name({ name: { id, title, state }, onArchiveName, onPinN
       }),
       onArchiveName: PropTypes.func,
       onPinName: PropTypes.func,
-  }
+  };

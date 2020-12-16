@@ -8,10 +8,10 @@ import * as NameStories from '../text/Name.stories';
 export default {
     component: PureNameList,
     title: 'NameList',
-    decorators: [story => <div style={{ padding: '3rem'}}>{story()}</div>],
+    decorators: [(story) => <div style={{ padding: '3rem'}}>{story()}</div>],
 };
 
-const Template = args => <PureNameList {...args} />;
+const Template = (args) => <PureNameList {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
@@ -24,7 +24,7 @@ Default.args = {
         { ...NameStories.Default.args.name, id: '5', title: 'Name 5'},
         { ...NameStories.Default.args.name, id: '6', title: 'Name 6'},
         { ...NameStories.Default.args.name, id: '7', title: 'Name 7'},
-    ],
+    ]
 };
 
 export const WithPinnedNames = Template.bind({});

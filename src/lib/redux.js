@@ -12,8 +12,8 @@ function nameStateReducer(nameState) {
     return (state, action) => {
         return {
             ...state,
-            names: state.names.map(name => 
-                name.id === action.id ? {...name, state: nameState} : name
+            names: state.names.map(
+                name => (name.id === action.id ? {...name, state: nameState} : name)
             ),
         };
     };
